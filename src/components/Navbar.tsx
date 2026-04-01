@@ -33,7 +33,7 @@ const Navbar = () => {
         <a href="#" className="font-heading text-xl font-bold gradient-text">
           FJ.
         </a>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 glass-card px-6 py-2 rounded-full">
           {links.map((l) => (
             <button
               key={l.href}
