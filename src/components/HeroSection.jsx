@@ -22,7 +22,7 @@ const HeroSection = () => {
           <p className="text-sm font-heading font-semibold uppercase tracking-widest text-glow-primary mb-4">
             Hello <span className="animate-bounce">👋</span>, I'm Fidelis Joseph
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <h1 className="font-heading text-3xl md:text-6xl font-bold leading-tight mb-6">
             Fullstack{" "}
             <span className="gradient-text">Web Developer</span>
           </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
             I build real-world, scalable web applications with modern technologies.
             From elegant frontends to robust backends — turning ideas into production-ready software.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-cols md:flex-wrap  gap-4">
             <Button onClick={() => scrollTo("#portfolio")} className="" size="sm" >
               View My Work
             </Button>

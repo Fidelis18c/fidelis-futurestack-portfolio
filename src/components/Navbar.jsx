@@ -44,7 +44,7 @@ const Navbar = () => {
             </button>
           ))}
         </div>
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-foreground ml-[17rem] " onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
