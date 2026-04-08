@@ -8,7 +8,7 @@ const HeroSection = () => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <header className="relative min-h-screen flex items-center dot-pattern overflow-hidden">
+    <header className="relative mt-10 min-h-screen flex items-center dot-pattern overflow-hidden">
       {/* Glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-glow-primary/10 blur-[120px] animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-glow-secondary/10 blur-[100px] animate-pulse-glow" />

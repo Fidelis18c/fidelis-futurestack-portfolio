@@ -140,7 +140,7 @@ const ContactSection = () => {
                 name="email"
                 type="email"
                 required
-                className="w-full px-4 py-4 rounded-2xl md:bg-secondary/50 md:border md:border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
                 placeholder="email"
               />
             </div>

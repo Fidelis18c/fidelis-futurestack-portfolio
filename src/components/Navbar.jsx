@@ -53,7 +53,7 @@ const Navbar = () => {
           ))}
         </div>
         <button 
-          className="md:hidden text-foreground ml-[17rem]" 
+          className="md:hidden text-foreground ml-[20rem]" 
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
