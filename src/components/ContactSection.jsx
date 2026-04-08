@@ -3,7 +3,7 @@ import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 // TODO: Replace with your actual backend URL (e.g., "https://api.yourdomain.com/contact")
-const BACKEND_URL = "http://localhost:5000/api/contact";
+const BACKEND_URL = import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/contact` : "http://localhost:5000/api/contact";
 
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -97,7 +97,7 @@ const ContactSection = () => {
 
             <div className="flex gap-4">
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/Fidelis18c"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit my GitHub profile"
@@ -106,7 +106,7 @@ const ContactSection = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/YOUR_USERNAME"
+                href="https://www.linkedin.com/in/fidelis-joseph-mpyalimi-56154038b"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit my LinkedIn profile"
