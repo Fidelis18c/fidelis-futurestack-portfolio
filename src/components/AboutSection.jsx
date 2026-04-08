@@ -76,50 +76,25 @@ const AboutSection = () => (
         ))}
       </div>
        
-     <div>
-           <div>
-             <h1 className="font-heading text-1xl md:text-2xl md:text-center font-bold mt-10">Tech stack</h1>
-           </div>
-
-        <div className="w-full overflow-hidden bg-transparent py-12">
-
-            <motion.div
-              className="flex"
-              animate={{
-              x: ["0%", "-50%"], // Moves from start to halfway (the end of the first set)
-              }}
-              transition={{
-              ease: "linear",
-              duration: 20, // Adjust this number to make it faster (10) or slower (30)
-              repeat: Infinity,
-              }}
-              style={{ width: "fit-content" }}
-             >
-
-                 {/* The Container that moves */}
-        <div className="flex animate-marquee whitespace-nowrap">
-           {techStack.map((tech, index) => (
-          <div 
-             key={index} 
-             className="flex flex-col items-center justify-center mx-12 min-w-[100px]"
-             >
-                       {/* The Image */}
-            <img 
-              src={tech.src} 
-              alt={tech.name} 
-              className="h-14 w-14 object-contain mb-4 hover:scale-110 transition-transform" 
-            />
-                      {/* The Text below */}
-            <span className="text-gray-400 text-xs font-semibold uppercase tracking-widest">
-              {tech.name}
-            </span>
-          </div>
-        ))}
-       </div>
-         </motion.div>
-    </div>
-
-       </div>
+      <div className="mt-20">
+        <h3 className="font-heading text-2xl text-center font-bold mb-10">Technical Expertises</h3>
+        
+        <div className="overflow-hidden py-4">
+          <motion.div
+            className="flex gap-8"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+            style={{ width: "fit-content" }}
+          >
+            {[...techStack, ...techStack].map((tech, i) => (
+              <div key={i} className="flex flex-col items-center justify-center min-w-[120px] glass-card p-4 rounded-xl">
+                <img src={tech.src} alt={tech.name} className="h-10 w-10 object-contain mb-3" />
+                <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">{tech.name}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
   
     </div>
   </section>

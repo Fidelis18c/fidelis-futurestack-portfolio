@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 const links = [
   { label: "About", href: "#about" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "· Fidelis Joseph  ·", href: "#fidelis-joseph" }, 
+  { label: "· Fidelis Joseph ·", href: "#home" }, 
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
@@ -22,7 +22,11 @@ const Navbar = () => {
 
   const handleClick = (href) => {
     setOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
