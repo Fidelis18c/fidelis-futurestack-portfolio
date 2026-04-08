@@ -30,10 +30,23 @@ const PortfolioSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="glass-card-hover group overflow-hidden rounded-none border border-border/50"
           >
-            <div className={`h-52 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
+            <a 
+              href={p.link !== "#" ? p.link : undefined}
+              target={p.link !== "#" ? "_blank" : undefined}
+              rel={p.link !== "#" ? "noopener noreferrer" : undefined}
+              className={`h-52 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden group/img cursor-pointer block`}
+            >
+              <img 
+                src={p.image} 
+                alt={p.title} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110 opacity-80 group-hover/img:opacity-100" 
+              />
               <div className="absolute inset-0 bg-glow-primary/5 group-hover:bg-glow-primary/10 transition-colors" />
-              <ExternalLink className="text-glow-primary opacity-30 group-hover:opacity-60 transition-opacity" size={36} />
-            </div>
+              <div className="absolute inset-0 bg-black/20 group-hover/img:bg-black/0 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/40">
+                <ExternalLink className="text-white" size={32} />
+              </div>
+            </a>
             <div className="p-6 space-y-4">
               <h3 className="font-heading font-semibold text-xl">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
