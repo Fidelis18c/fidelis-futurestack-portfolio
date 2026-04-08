@@ -96,20 +96,20 @@ const ContactSection = () => {
             </div>
 
             <div className="flex gap-4">
-              {/* TODO: Add your GitHub link below */}
               <a
                 href="https://github.com/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit my GitHub profile"
                 className="w-12 h-12 rounded-none flex items-center justify-center bg-secondary border border-border/50 text-muted-foreground hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
               >
                 <Github size={20} />
               </a>
-              {/* TODO: Add your LinkedIn link below */}
               <a
                 href="https://linkedin.com/in/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile"
                 className="w-12 h-12 rounded-none flex items-center justify-center bg-secondary border border-border/50 text-muted-foreground hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
               >
                 <Linkedin size={20} />

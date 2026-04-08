@@ -39,16 +39,24 @@ const Navbar = () => {
        
         <div className="hidden md:flex items-center mr-3 gap-6 glass-card px-6 py-2 rounded-full">
           {links.map((l) => (
-            <button
+            <a
               key={l.href}
-              onClick={() => handleClick(l.href)}
+              href={l.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleClick(l.href);
+              }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
-            </button>
+            </a>
           ))}
         </div>
-        <button className="md:hidden text-foreground ml-[17rem] " onClick={() => setOpen(!open)}>
+        <button 
+          className="md:hidden text-foreground ml-[17rem]" 
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -56,13 +64,17 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden glass-card mt-2 mx-4 p-4 rounded-xl flex flex-col gap-4">
           {links.map((l) => (
-            <button
+            <a
               key={l.href}
-              onClick={() => handleClick(l.href)}
+              href={l.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleClick(l.href);
+              }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors text-left"
             >
               {l.label}
-            </button>
+            </a>
           ))}
         </div>
       )}
