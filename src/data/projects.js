@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Dear Mama Foundation",
     desc: "A dedicated platform supporting maternal health and community empowerment through digital resources and engagement.",
-    stack: ["React", "Node.js", "Tailwind CSS"],
+    stack: ["React", "Node.js", "Tailwind CSS","PostgreSQL"],
     color: "from-pink-600/20 to-rose-500/20",
     image: "/DearmamaImage.png",
     link: "https://dear-mama-delta.vercel.app/",
