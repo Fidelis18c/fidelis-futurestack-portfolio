@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="section-padding relative dot-pattern">
+  <section id="portfolio" className="pt-[5rem]  md:section-padding relative dot-pattern">
     <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -13,14 +13,14 @@ const PortfolioSection = () => (
         className="text-center mb-16"
       >
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-          My <span className="gradient-text">Portfolio</span>
+           <span className="">Portfolio</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className=" max-w-xl mx-auto">
           A selection of projects showcasing my skills across the full stack.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-10 px-4 md:px-20">
+      <div className="grid md:grid-cols-2 gap-10 md:px-20">
         {projects.map((p, i) => (
           <motion.div
             key={p.title}
@@ -28,7 +28,7 @@ const PortfolioSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="glass-card-hover group overflow-hidden rounded-none border border-border/50"
+            className="glass-card-hover group overflow-hidden rounded-2xl border border-border/50"
           >
             <a 
               href={p.link !== "#" ? p.link : undefined}
@@ -47,19 +47,10 @@ const PortfolioSection = () => (
                 <ExternalLink className="text-white" size={32} />
               </div>
             </a>
-            <div className="p-6 space-y-4">
+            <div className="p-3 ">
               <h3 className="font-heading font-semibold text-xl">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-              <div className="flex flex-wrap gap-2 pt-2">
-                {p.stack.map((tech) => (
-                  <span 
-                    key={tech}
-                    className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-glow-primary/10 text-glow-primary border border-glow-primary/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+             
             </div>
           </motion.div>
         ))}

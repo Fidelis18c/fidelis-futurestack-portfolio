@@ -38,7 +38,7 @@ const cards = [
 
 // section-padding
 const AboutSection = () => (
-  <section id="about" className="section-padding relative"> 
+  <section id="about" className="pt-[5rem] relative"> 
     <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -48,16 +48,16 @@ const AboutSection = () => (
         className="text-center mb-16"
       >
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-          What I <span className="gradient-text">Do</span>
+          What I <span className="">Do</span>
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className=" md:max-w-2xl md:mx-auto leading-relaxed">
           I'm a fullstack developer who thrives on building impactful digital products.
           With expertise spanning frontend, backend, and database technologies,
           I craft solutions that solve real problems.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 py-5">
+      <div className="grid gap-10 md:grid-cols-3 md:gap-6 ">
         {cards.map((c, i) => (
           <motion.div
             key={c.title}
@@ -65,10 +65,10 @@ const AboutSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="glass-card-hover p-4 text-center"
+            className="glass-card-hover p-4  text-center"
           >
             <div className="w-14 h-14 mx-auto mb-5 rounded-xl flex items-center justify-center bg-glow-primary/10">
-              <c.icon className="text-glow-primary" size={28} />
+              <c.icon className="" size={28} />
             </div>
             <h3 className="font-heading font-semibold text-lg mb-3">{c.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
@@ -77,7 +77,7 @@ const AboutSection = () => (
       </div>
        
       <div className="mt-20">
-        <h3 className="font-heading text-2xl text-center font-bold mb-10">Technical Expertises</h3>
+        <h3 className="font-heading text-2xl text-center font-bold mb-10">Tech Stack</h3>
         
         <div className="overflow-hidden py-4">
           <motion.div

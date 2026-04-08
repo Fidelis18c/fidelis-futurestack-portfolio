@@ -50,7 +50,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-padding relative dot-pattern">
+    <section id="contact" className="ml-3 mr-4 relative dot-pattern">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,9 +60,9 @@ const ContactSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+            Get In <span className="">Touch</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto italic">
+          <p className=" max-w-xl mx-auto italic">
             "Every great developer was once a beginner who didn't quit."
           </p>
         </motion.div>
@@ -74,34 +74,34 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="space-y-6 mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-none flex items-center justify-center bg-glow-primary/10 border border-glow-primary/20">
-                  <Mail className="text-glow-primary" size={24} />
+            <div className="space-y-3 mb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-none flex items-center justify-center ">
+                  <Mail className="" size={24} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground">Email</p>
+                  <p className="text-xs uppercase  ">Email</p>
                   <p className="font-medium">fidelismpyalimi12@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-none flex items-center justify-center bg-glow-primary/10 border border-glow-primary/20">
-                  <MapPin className="text-glow-primary" size={24} />
+                <div className="w-12 h-12 rounded-none flex items-center justify-center   border-glow-primary/20">
+                  <MapPin className="" size={24} />
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground">Location</p>
+                  <p className="text-xs uppercase ">Location</p>
                   <p className="font-medium">Dar es Salaam, Tanzania</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex ">
               <a
                 href="https://github.com/Fidelis18c"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit my GitHub profile"
-                className="w-12 h-12 rounded-none flex items-center justify-center bg-secondary border border-border/50 text-muted-foreground hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
+                className="w-12 h-12 rounded-none flex items-center justify-center    hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
               >
                 <Github size={20} />
               </a>
@@ -110,7 +110,7 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit my LinkedIn profile"
-                className="w-12 h-12 rounded-none flex items-center justify-center bg-secondary border border-border/50 text-muted-foreground hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
+                className="w-12 h-12 rounded-none flex items-center justify-center  hover:text-glow-primary hover:border-glow-primary/30 transition-all duration-300"
               >
                 <Linkedin size={20} />
               </a>
@@ -123,35 +123,34 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             onSubmit={handleSubmit}
-            className="glass-card p-10 space-y-6 rounded-none border-border/50"
+            className="glass-card p-10 space-y-6 rounded-2xl border-border/50"
           >
             <div>
-              <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2 block">Name</label>
               <input
                 name="name"
                 type="text"
                 required
-                className="w-full px-4 py-4 rounded-none bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
-                placeholder="Name"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
+                placeholder="name"
               />
             </div>
             <div>
-              <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2 block">Email</label>
+             
               <input
                 name="email"
                 type="email"
                 required
-                className="w-full px-4 py-4 rounded-none bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
-                placeholder="Email"
+                className="w-full px-4 py-4 rounded-2xl md:bg-secondary/50 md:border md:border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
+                placeholder="email"
               />
             </div>
             <div>
-              <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2 block">Message</label>
+              
               <textarea
                 name="message"
                 rows={4}
                 required
-                className="w-full px-4 py-4 rounded-none bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
                 placeholder="Type your message..."
               ></textarea>
             </div>

@@ -16,10 +16,12 @@ export default {
     },
     extend: {
       fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
         heading: ["Space Grotesk", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
+        milk: '#FAF9F6',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -24,23 +24,23 @@ const services = [
 
 const ServicesSection = () => (
   <section id="services" className="section-padding relative">
-    <div className="container mx-auto">
+    <div className="ml-4 mr-4 mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-center mb-16"
+        className="text-center mb-14"
       >
-        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-          Services & <span className="gradient-text">Skills</span>
+        <h2 className=" text-3xl md:text-4xl font-bold mb-4">
+          Services & <span className="">Skills</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className=" max-w-xl mx-auto">
           End-to-end development expertise to bring your vision to life.
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 ">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 md:gap-6 mb-16 ">
         {services.map((s, i) => (
           <motion.div
             key={s.title}
@@ -50,8 +50,8 @@ const ServicesSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="glass-card-hover p-6 text-center"
           >
-            <div className="w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center bg-glow-primary/10">
-              <s.icon className="text-glow-primary" size={24} />
+            <div className="w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center ">
+              <s.icon className="" size={24} />
             </div>
             <h3 className="font-heading font-semibold mb-2">{s.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>

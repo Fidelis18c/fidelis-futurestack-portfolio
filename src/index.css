@@ -6,6 +6,8 @@
 
 @layer base {
   :root {
+    milk: '#FAF9F6';
+     /* --background: 40 33% 98%; */
     --background: 222 47% 6%;
     --foreground: 210 40% 96%;
 
