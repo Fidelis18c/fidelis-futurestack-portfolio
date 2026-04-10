@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-around px-4">
        
-        <div className="hidden md:flex items-center mr-3 gap-6 glass-card px-6 py-2 rounded-full">
+        <div className="hidden md:flex items-center mr-3 gap-6 glass-card px-8 py-3 rounded-full border border-primary/20 shadow-xl">
           {links.map((l) => (
             <a
               key={l.href}
@@ -46,23 +46,23 @@ const Navbar = () => {
                 e.preventDefault();
                 handleClick(l.href);
               }}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-semibold text-card-foreground/70 hover:text-card-foreground transition-all duration-300 hover:scale-105"
             >
               {l.label}
             </a>
           ))}
         </div>
         <button 
-          className="md:hidden text-foreground ml-[20rem]" 
+          className="md:hidden text-foreground ml-auto bg-card p-2 rounded-lg" 
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={24} className="text-card-foreground" /> : <Menu size={24} className="text-card-foreground" />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden glass-card mt-2 mx-4 p-4 rounded-xl flex flex-col gap-4">
+        <div className="md:hidden glass-card mt-2 mx-4 p-6 rounded-2xl flex flex-col gap-5 border border-primary/20 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-300">
           {links.map((l) => (
             <a
               key={l.href}
@@ -71,7 +71,7 @@ const Navbar = () => {
                 e.preventDefault();
                 handleClick(l.href);
               }}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors text-left"
+              className="text-base font-medium text-card-foreground/80 hover:text-card-foreground transition-colors text-left"
             >
               {l.label}
             </a>

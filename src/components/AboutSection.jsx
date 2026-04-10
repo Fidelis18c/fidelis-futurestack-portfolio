@@ -38,8 +38,11 @@ const cards = [
 
 // section-padding
 const AboutSection = () => (
-  <section id="about" className="pt-[5rem] relative"> 
-    <div className="container mx-auto">
+  <section id="about" className="pt-[5rem] relative overflow-hidden"> 
+    {/* Background Glows */}
+    <div className="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
+    <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+        <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,19 +68,19 @@ const AboutSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="glass-card-hover p-4  text-center"
+            className="glass-card-hover p-6 text-center text-card-foreground shadow-2xl"
           >
-            <div className="w-14 h-14 mx-auto mb-5 rounded-xl flex items-center justify-center bg-glow-primary/10">
-              <c.icon className="" size={28} />
+            <div className="w-14 h-14 mx-auto mb-5 rounded-xl flex items-center justify-center bg-primary-foreground/10">
+              <c.icon className="text-primary-foreground" size={28} />
             </div>
             <h3 className="font-heading font-semibold text-lg mb-3">{c.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+            <p className="text-sm text-card-foreground font-semibold leading-relaxed">{c.desc}</p>
           </motion.div>
         ))}
       </div>
        
       <div className="mt-20">
-        <h3 className="font-heading text-2xl text-center font-bold mb-10">Tech Stack</h3>
+        <h3 className="font-heading text-2xl text-center font-bold mb-10 text-foreground">Tech Stack</h3>
         
         <div className="overflow-hidden py-4">
           <motion.div
@@ -87,9 +90,9 @@ const AboutSection = () => (
             style={{ width: "fit-content" }}
           >
             {[...techStack, ...techStack].map((tech, i) => (
-              <div key={i} className="flex flex-col items-center justify-center min-w-[120px] glass-card p-4 rounded-xl">
+              <div key={i} className="flex flex-col items-center justify-center min-w-[120px] glass-card p-4 rounded-xl text-card-foreground">
                 <img src={tech.src} alt={tech.name} className="h-10 w-10 object-contain mb-3" />
-                <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">{tech.name}</span>
+                <span className="text-[10px] text-card-foreground font-bold uppercase tracking-widest">{tech.name}</span>
               </div>
             ))}
           </motion.div>

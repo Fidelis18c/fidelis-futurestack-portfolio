@@ -23,8 +23,11 @@ const services = [
 
 
 const ServicesSection = () => (
-  <section id="services" className="section-padding relative">
-    <div className="ml-4 mr-4 mx-auto">
+  <section id="services" className="section-padding relative overflow-hidden">
+    {/* Background Glows */}
+    <div className="absolute top-1/3 -left-20 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
+    <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+        <div className="ml-4 mr-4 mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,13 +51,13 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="glass-card-hover p-6 text-center"
+            className="glass-card-hover p-8 text-center text-card-foreground shadow-xl"
           >
-            <div className="w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center ">
-              <s.icon className="" size={24} />
+            <div className="w-12 h-12 mx-auto mb-6 rounded-lg flex items-center justify-center bg-primary-foreground/10">
+              <s.icon className="text-primary-foreground" size={24} />
             </div>
-            <h3 className="font-heading font-semibold mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+            <h3 className="font-heading font-semibold text-lg mb-3">{s.title}</h3>
+            <p className="text-sm text-card-foreground font-semibold leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
       </div>

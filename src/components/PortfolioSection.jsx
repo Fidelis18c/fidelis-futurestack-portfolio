@@ -3,7 +3,11 @@ import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="pt-[5rem]  md:section-padding relative dot-pattern">
+  <section id="portfolio" className="pt-[5rem] md:section-padding relative overflow-hidden">
+    {/* Background Glows */}
+    <div className="absolute top-1/4 -right-10 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
+    <div className="absolute bottom-1/3 -left-10 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+    
     <div className="container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -28,7 +32,7 @@ const PortfolioSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="glass-card-hover group overflow-hidden rounded-2xl border border-border/50"
+            className="glass-card-hover group overflow-hidden rounded-2xl border border-border/50 text-card-foreground"
           >
             <a 
               href={p.link !== "#" ? p.link : undefined}
@@ -47,10 +51,9 @@ const PortfolioSection = () => (
                 <ExternalLink className="text-white" size={32} />
               </div>
             </a>
-            <div className="p-3 ">
-              <h3 className="font-heading font-semibold text-xl">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-             
+            <div className="p-4">
+              <h3 className="font-heading font-semibold text-xl mb-2">{p.title}</h3>
+              <p className="text-sm text-card-foreground font-semibold leading-relaxed">{p.desc}</p>
             </div>
           </motion.div>
         ))}

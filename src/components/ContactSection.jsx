@@ -50,7 +50,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="ml-3 mr-4 relative dot-pattern">
+    <section id="contact" className="ml-3 mr-4 relative overflow-hidden">
+      {/* Background Glows */}
+      <div className="absolute top-1/4 -right-10 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
+      <div className="absolute bottom-1/4 -left-10 w-96 h-96 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+      
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -123,41 +127,39 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             onSubmit={handleSubmit}
-            className="glass-card p-10 space-y-6 rounded-2xl border-border/50"
+            className="glass-card p-10 space-y-6 rounded-2xl border-border/50 text-card-foreground shadow-2xl"
           >
             <div>
               <input
                 name="name"
                 type="text"
                 required
-                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
-                placeholder="name"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/10 border border-primary-foreground/30 text-card-foreground focus:outline-none focus:border-primary-foreground/60 transition-colors placeholder:text-card-foreground/70"
+                placeholder="Name"
               />
             </div>
             <div>
-             
               <input
                 name="email"
                 type="email"
                 required
-                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
-                placeholder="email"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/10 border border-primary-foreground/30 text-card-foreground focus:outline-none focus:border-primary-foreground/60 transition-colors placeholder:text-card-foreground/70"
+                placeholder="Email"
               />
             </div>
             <div>
-              
               <textarea
                 name="message"
                 rows={4}
                 required
-                className="w-full px-4 py-4 rounded-2xl bg-secondary/50 border border-border/50 text-foreground focus:outline-none focus:border-glow-primary/50 transition-colors"
+                className="w-full px-4 py-4 rounded-2xl bg-secondary/10 border border-primary-foreground/30 text-card-foreground focus:outline-none focus:border-primary-foreground/60 transition-colors placeholder:text-card-foreground/70"
                 placeholder="Type your message..."
               ></textarea>
             </div>
             <button 
               type="submit" 
               disabled={loading}
-              className="glow-button w-full py-4 text-center disabled:opacity-50"
+              className="glow-button w-full py-4 text-center disabled:opacity-50 font-bold uppercase tracking-widest text-sm"
             >
               {loading ? "Sending..." : submitted ? "Message Sent ✓" : "Send Message"}
             </button>
