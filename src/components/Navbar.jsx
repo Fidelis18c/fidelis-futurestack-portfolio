@@ -36,7 +36,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-around px-4">
-       
+        {/* FJ Mobile Logo - Only visible when scrolled and on mobile */}
+        <div className={`md:hidden font-heading font-bold text-2xl tracking-tighter text-white transition-all duration-500 ${
+          scrolled ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+        }`}>
+          FJ<span className="text-primary-foreground">.</span>
+        </div>
         <div className="hidden md:flex items-center mr-3 gap-6 glass-card px-8 py-3 rounded-full border border-primary/20 shadow-xl">
           {links.map((l) => (
             <a

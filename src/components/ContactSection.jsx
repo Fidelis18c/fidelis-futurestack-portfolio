@@ -52,10 +52,10 @@ const ContactSection = () => {
   return (
     <section id="contact" className="ml-3 mr-4 relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-1/4 -right-10 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -left-10 w-96 h-96 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+      <div className="absolute top-1/4 -right-10 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-10 w-96 h-96 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow pointer-events-none" />
       
-      <div className="container mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

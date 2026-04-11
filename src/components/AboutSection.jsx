@@ -40,9 +40,9 @@ const cards = [
 const AboutSection = () => (
   <section id="about" className="pt-[5rem] relative overflow-hidden"> 
     {/* Background Glows */}
-    <div className="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
-    <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
-        <div className="container mx-auto">
+    <div className="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow pointer-events-none" />
+    <div className="absolute bottom-1/4 -right-20 w-64 h-64 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow pointer-events-none" />
+        <div className="relative z-10 container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

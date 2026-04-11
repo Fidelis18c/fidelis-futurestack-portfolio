@@ -7,11 +7,12 @@ export const projects = [
     link: "https://dear-mama-delta.vercel.app/",
   },
   {
-    title: "E-Commerce Suite",
-    desc: "Comprehensive online marketplace with integrated payment processing and dynamic inventory management.",
+    title: "RESUME",
+    desc: "View my professional journey, skills, and technical background.",
     color: "from-blue-600/20 to-cyan-500/20",
-    image: "/projects/ecommerce.png",
-    link: "#",
+    image: null, // No image needed for the special Resume card
+    link: "/babypips.PDF", // Test PDF path
+    isResume: true,
   },
   {
     title: "Analytics Dashboard",

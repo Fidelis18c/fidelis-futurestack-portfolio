@@ -10,10 +10,10 @@ const HeroSection = () => {
   return (
     <header className="relative mt-10 md:mt-0 min-h-screen flex items-center overflow-hidden">
       {/* Glow orbs - use subtle blue and primary glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow pointer-events-none" />
 
-      <div className="grid grid-rows-2 px-5 md:flex md:flex-col-2 md:gap-[5rem] items-center md:px-[5rem] md:pt-24">
+      <div className="relative z-10 grid grid-rows-2 px-5 md:flex md:flex-col-2 md:gap-[5rem] items-center md:px-[5rem] md:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

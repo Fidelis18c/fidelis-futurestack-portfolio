@@ -5,10 +5,10 @@ import { projects } from "@/data/projects";
 const PortfolioSection = () => (
   <section id="portfolio" className="pt-[5rem] md:section-padding relative overflow-hidden">
     {/* Background Glows */}
-    <div className="absolute top-1/4 -right-10 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
-    <div className="absolute bottom-1/3 -left-10 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
+    <div className="absolute top-1/4 -right-10 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow pointer-events-none" />
+    <div className="absolute bottom-1/3 -left-10 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow pointer-events-none" />
     
-    <div className="container mx-auto">
+    <div className="relative z-10 container mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,15 +36,23 @@ const PortfolioSection = () => (
           >
             <a 
               href={p.link !== "#" ? p.link : undefined}
-              target={p.link !== "#" ? "_blank" : undefined}
-              rel={p.link !== "#" ? "noopener noreferrer" : undefined}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`h-52 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden group/img cursor-pointer block`}
             >
-              <img 
-                src={p.image} 
-                alt={p.title} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110 opacity-80 group-hover/img:opacity-100" 
-              />
+              {p.isResume ? (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-4xl md:text-5xl font-heading font-black tracking-[0.2em] text-white/90 drop-shadow-lg scale-100 group-hover/img:scale-110 transition-transform duration-500">
+                    RESUME
+                  </span>
+                </div>
+              ) : (
+                <img 
+                  src={p.image} 
+                  alt={p.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110 opacity-80 group-hover/img:opacity-100" 
+                />
+              )}
               <div className="absolute inset-0 bg-glow-primary/5 group-hover:bg-glow-primary/10 transition-colors" />
               <div className="absolute inset-0 bg-black/20 group-hover/img:bg-black/0 transition-colors" />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity bg-black/40">

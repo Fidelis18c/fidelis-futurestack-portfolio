@@ -25,9 +25,9 @@ const services = [
 const ServicesSection = () => (
   <section id="services" className="section-padding relative overflow-hidden">
     {/* Background Glows */}
-    <div className="absolute top-1/3 -left-20 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow" />
-    <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow" />
-        <div className="ml-4 mr-4 mx-auto">
+    <div className="absolute top-1/3 -left-20 w-96 h-96 rounded-full bg-glow-primary/5 blur-[120px] animate-pulse-glow pointer-events-none" />
+    <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full bg-glow-secondary/5 blur-[100px] animate-pulse-glow pointer-events-none" />
+        <div className="relative z-10 ml-4 mr-4 mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
