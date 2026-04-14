@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-visual.jpg";
 import heroImage from "@/assets/Hero2.jpeg";
+import HEROIMAGE  from "@/assets/Hero3.jpeg";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
@@ -49,7 +50,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl bg-primary/10 blur-3xl" />
             <img
-              src={heroImage}
+              src={HEROIMAGE}
               alt="Futuristic tech visual"
               className="relative w-[420px] h-[420px] md:w-[420px] md:h-[420px] object-cover rounded-2xl border border-border/30 brightness-95 shadow-2xl"
             />
